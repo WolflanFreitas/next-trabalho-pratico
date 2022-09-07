@@ -57,7 +57,7 @@ const Products = (props: any) => {
                         <Container>
                             <Navbar.Brand href="/">
                                 <Image src={'/cpu.png'} alt="logo" width={30} height={30} className={"d-inline-block align-top"} />
-                                <span className={"d-inline-block align-top"}>Lojão dos importados</span>
+                                <span className={"d-inline-block align-top"}>Lojão dos Importados</span>
                             </Navbar.Brand>
                         </Container>
                     </Navbar>
@@ -84,6 +84,9 @@ const Products = (props: any) => {
                                             </p>
                                             <p>
                                                 <strong>Avaliação:</strong> <span>{product.rating.rate}/5</span>
+                                            </p>
+                                            <p>
+                                                <strong>Quantidade de avaliações:</strong> <span>{product.rating.count}</span>
                                             </p>
                                         </Card.Text>
                                         <Button variant="success">Comprar</Button>

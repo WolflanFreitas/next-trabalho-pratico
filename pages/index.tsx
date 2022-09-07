@@ -37,15 +37,15 @@ const Home: NextPage = (props: any) => {
             <Container>
               <Navbar.Brand href="/">
                 <Image src={'/cpu.png'} alt="logo" width={30} height={30} className={"d-inline-block align-top"} />
-                <span className={"d-inline-block align-top"}>Lojão dos importados</span>
+                <span className={"d-inline-block align-top"}>Lojão dos Importados</span>
               </Navbar.Brand>
             </Container>
           </Navbar>
         </Row>
-        <Row className='justify-content-around mt-3'>
+        <Row className='justify-content-center mt-3'>
           {data.map((product: any) => {
             return (
-              <Col key={product.id} xl={'auto'} className='p-2'>
+              <Col key={product.id} sm={1} md={4} xl={'auto'} className='p-2' style={{ textAlign: 'center' }}>
                 <Card key={product.id} style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={product.image} style={{ width: '100%', height: 250 }} />
                   <Card.Body>
