@@ -10,7 +10,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import doTruncarStr from '../functions/truncate'
+import doTruncarStr from '../functions/truncate';
+import { BsFillBasket3Fill } from "react-icons/bs";
 interface Product {
   id: number;
   title: string;
@@ -25,7 +26,7 @@ interface Product {
 }
 
 const Home: NextPage = () => {
-  const url = 'https://fakestoreapi.com/products?limit=100';
+  const url = 'https://fakestoreapi.com/products?limit=10';
   const { data, error } = useFetch<Product[]>(url);
 
   //Será chamado quando houver erro ao chamar a api (indisponibilidade ou chamada incorreta)
@@ -76,7 +77,7 @@ const Home: NextPage = () => {
                   <Card.Body>
                     <Card.Title>{doTruncarStr(product.title, 20)}</Card.Title>
 
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Veja mais <BsFillBasket3Fill /></Button>
                   </Card.Body>
                 </Card>
               </Col>
