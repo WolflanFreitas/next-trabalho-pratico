@@ -10,7 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Image from 'next/image';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import doTruncarStr from '../functions/truncate'
 interface Product {
   id: number;
   title: string;
@@ -74,10 +74,8 @@ const Home: NextPage = () => {
                 <Card key={product.id} style={{ width: '18rem' }}>
                   <Card.Img variant="top" src={product.image} style={{ width: '100%', height: 250 }} />
                   <Card.Body>
-                    <Card.Title>{product.title}</Card.Title>
-                    <Card.Text>
-                      {product.description}
-                    </Card.Text>
+                    <Card.Title>{doTruncarStr(product.title, 20)}</Card.Title>
+
                     <Button variant="primary">Go somewhere</Button>
                   </Card.Body>
                 </Card>
