@@ -79,7 +79,7 @@ const Products = (props: any) => {
                                                 <strong>Descrição:</strong> <span>{product.description}</span>
                                             </p>
                                             <p>
-                                                <strong>Preço:</strong> <span>{product.price}</span>
+                                                <strong>Preço:</strong> <span>$ {product.price} USD</span>
                                             </p>
                                             <p>
                                                 <strong>Categoria:</strong> <span>{product.category}</span>
