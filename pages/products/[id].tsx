@@ -10,6 +10,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import Link from 'next/link';
+import { BiArrowBack, BiDollar } from "react-icons/bi";
 
 interface Product {
     id: number;
@@ -89,7 +91,10 @@ const Products = (props: any) => {
                                                 <strong>Quantidade de avaliações:</strong> <span>{product.rating.count}</span>
                                             </p>
                                         </Card.Text>
-                                        <Button variant="success">Comprar</Button>
+                                        <Link href={'/'}>
+                                            <Button variant="success" className='m-1'><BiArrowBack />Voltar</Button>
+                                        </Link>
+                                        <Button className='btn-outline-danger' variant="outline"><BiDollar />Comprar</Button>
                                     </Col>
                                 </Row>
                             </Card.Body>
